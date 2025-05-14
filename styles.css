@@ -1,0 +1,182 @@
+/* ---------------------------
+   Typography Styles
+----------------------------*/
+
+/* Header styles */
+h2, .why-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  
+  /* Subheader style */
+  .why-header {
+    font-size: 3rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Paragraphs */
+  p {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Boldonse custom font class */
+  .boldonse-regular {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+  }
+  
+  /* ---------------------------
+     Layout & Section Styling
+  ----------------------------*/
+  
+  /* Centered section layout */
+  #section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1400px;
+  }
+  
+  /* Full-screen hero section with background image */
+  .hero {
+    background-image: url("./images/ghibi_me.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Full-screen blank section */
+  .blank {
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Pink background utility class */
+  .bg-pink {
+    background-color: pink;
+  }
+  
+  /* ---------------------------
+     Navbar Styling
+  ----------------------------*/
+  
+  /* Navbar base styling */
+  .my-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  /* Navbar styling after scrolling */
+  .my-navbar.scrolled {
+    background-color: rgba(255, 192, 203, 0.676); /* light pink */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navigation links */
+  .nav-link {
+    border: 2px solid transparent;
+    border-radius: 5px;
+  }
+  
+  /* Top nav link hover effect */
+  .nav-link-up:hover {
+    border: 2px solid pink;
+    border-radius: 5px;
+  }
+  
+  /* Bottom nav link hover effect */
+  .nav-link-bottom:hover {
+    background-color: pink;
+    color: #fff !important;
+  }
+  
+  /* ---------------------------
+     Hero Header Text
+  ----------------------------*/
+  
+  /* Large name/header text */
+  .name-header {
+    font-size: 10rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    line-height: 1.24;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1560px) {
+    .name-header {
+      font-size: 8rem; 
+    }
+  }
+  
+  @media (max-width: 1056px) {
+    .name-header {
+      font-size: 7rem;
+    }
+  }
+  
+  @media (max-width: 760px) {
+    .name-header {
+      font-size: 5rem;
+    }
+  }
+  
+  /* ---------------------------
+     Card Component
+  ----------------------------*/
+  
+  /* Custom card styling */
+  .card-custom {
+    background: linear-gradient(to bottom right, hsla(318, 47%, 69%, 0.209), #ffffff);
+    border: none;
+    box-shadow: 0 4px 12px rgba(255, 20, 147, 0.1);
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for card */
+  .card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(255, 105, 180, 0.3); /* soft pink hover glow */
+  }
+  
+  /* Line under card headers */
+  .card-custom h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: hotpink;
+    margin-top: 6px;
+    border-radius: 2px;
+  }
+  
+  /* ---------------------------
+     Button Styles
+  ----------------------------*/
+  
+  /* Send button hover effect */
+  .send-btn:hover {
+    background-color: #e986bb;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 20, 147, 0.5);
+  }
+  

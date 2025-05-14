@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cursor Spotlight Reveal</title>
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      font-family: sans-serif;
+    }
+
+    .header {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .text-spotlight {
+      font-size: 4rem;
+      font-weight: bold;
+      color: hotpink;
+      position: relative;
+
+      /* Start hidden */
+      mask-image: none;
+      -webkit-mask-image: none;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="header" id="header">
+    <div class="text-spotlight" id="text">Mike Simonov</div>
+  </div>
+
+  <script>
+    const text = document.getElementById('text');
+    const header = document.getElementById('header');
+
+    header.addEventListener('mousemove', (e) => {
+      const rect = text.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const spotlight = `radial-gradient(circle at ${x}px ${y}px, black 40px, transparent 60px)`;
+      text.style.maskImage = spotlight;
+      text.style.webkitMaskImage = spotlight;
+    });
+
+    header.addEventListener('mouseleave', () => {
+      text.style.maskImage = 'none';
+      text.style.webkitMaskImage = 'none';
+    });
+  </script>
+
+</body>
+</html>
