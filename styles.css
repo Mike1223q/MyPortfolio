@@ -135,6 +135,12 @@ h2, .why-header {
       font-size: 5rem;
     }
   }
+
+  @media (max-width: 600px) {
+    .name-header {
+      font-size: 4rem;
+    }
+  }
   
   /* ---------------------------
      Card Component
